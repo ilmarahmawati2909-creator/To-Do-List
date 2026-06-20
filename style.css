@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #4a4a4a; /* Background luar abu gelap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 540px;
+    padding: 40px 30px;
+    border-radius: 30px;
+}
+
+.todo-app h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #242424;
+    margin-bottom: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 40px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 15px 50px;
+    background: #242424;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+/* Style untuk list tugas */
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Jika kamu menggunakan gambar checklist.png & unchecklist.png di folder yang sama */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(unchecklist.png);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+    top: 10px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checklist.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+    color: #555;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: #edeef0;
+}
